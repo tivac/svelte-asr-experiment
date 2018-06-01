@@ -1,34 +1,26 @@
 import router from "./router.js";
 
-import Layout from "./Layout.html";
-
 import Home from "./Home.html";
+import App from "./App.html";
 import Page from "./Page.html";
 
 router.addState({
-    name     : "home",
-    route    : "/",
-    template : {
-        component : Layout,
-        options   : {
-            data : {
-                Page : Home
-            }
-        }
-    }
+    name         : "app",
+    defaultChild : "home",
+    route        : "/",
+    template     : App
 });
 
 router.addState({
-    name     : "page",
-    route    : "/page",
-    template : {
-        component : Layout,
-        options   : {
-            data : {
-                Page
-            }
-        }
-    }
+    name     : "app.home",
+    route    : "/home",
+    template : Home
 });
 
-router.evaluateCurrentRoute("home");
+router.addState({
+    name     : "app.page",
+    route    : "/page",
+    template : Page
+});
+
+router.evaluateCurrentRoute("app");
