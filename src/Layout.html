@@ -1,0 +1,13 @@
+<h1>Layout! {Date.now()}</h1>
+
+<svelte:component this={Page} {...props}/>
+
+<div>FOOTER!</div>
+
+<script>
+export default {
+    onstate({ changed, current }) {
+        console.log(changed, current);
+    }
+};
+</script>

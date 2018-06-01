@@ -1,0 +1,20 @@
+<div>HOME</div>
+<p>
+    <a use:link=links.page>/Page</a>
+</p>
+
+<script>
+import link from "./link.js";
+
+export default {
+    data : () => ({
+        links : {
+            page : "page"
+        }
+    }),
+
+    actions : {
+        link
+    }
+};
+</script>
