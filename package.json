@@ -1,14 +1,14 @@
 {
-  "name": "svelte-asr",
+  "name": "svelte-asr-experiment",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "svelte & abstract-state-router experimenting",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "rollup --config --watch"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Pat Cavit <github@patcavit.com>",
+  "license": "MIT",
   "devDependencies": {
     "@tivac/eslint-config": "^2.0.1",
     "abstract-state-router": "^6.0.4",
@@ -32,8 +32,8 @@
       "html"
     ],
     "parserOptions": {
-        "ecmaVersion": 6,
-        "sourceType": "module"
+      "ecmaVersion": 6,
+      "sourceType": "module"
     }
   }
 }

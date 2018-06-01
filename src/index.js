@@ -1,6 +1,7 @@
 import router from "./router.js";
 
 import Layout from "./Layout.html";
+
 import Home from "./Home.html";
 import Page from "./Page.html";
 
@@ -10,7 +11,9 @@ router.addState({
     template : {
         component : Layout,
         options   : {
-            Page : Home
+            data : {
+                Page : Home
+            }
         }
     }
 });
@@ -21,7 +24,9 @@ router.addState({
     template : {
         component : Layout,
         options   : {
-            Page
+            data : {
+                Page
+            }
         }
     }
 });

@@ -1,4 +1,4 @@
-<h1>Layout! {Date.now()}</h1>
+<h1>Layout! {date}</h1>
 
 <svelte:component this={Page} {...props}/>
 
@@ -6,8 +6,8 @@
 
 <script>
 export default {
-    onstate({ changed, current }) {
-        console.log(changed, current);
-    }
+    data : () => ({
+        date : Date.now()
+    }),
 };
 </script>
