@@ -1,1 +1,20 @@
-<div>I'm a PAAAAAGE!</div>
+<div>PAGE</div>
+<p>
+    <a use:link=links.home>/</a>
+</p>
+
+<script>
+import link from "./link.js";
+
+export default {
+    data : () => ({
+        links : {
+            home : "app.home"
+        }
+    }),
+
+    actions : {
+        link
+    }
+};
+</script>

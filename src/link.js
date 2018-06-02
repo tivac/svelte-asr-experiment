@@ -1,6 +1,11 @@
+import shouldClick from "click-should-be-intercepted-for-navigation";
 import router from "./router.js";
 
 function process(args) {
+    if(typeof args === "undefined") {
+        throw new Error("Must pass args to link action");
+    }
+
     if(typeof args === "string") {
         return [ args ];
     }
@@ -12,9 +17,13 @@ const link = (node, args) => {
     let state = process(args);
     
     const handler = (e) => {
+        if(!shouldClick(e)) {
+            return;
+        }
+
         e.preventDefault();
 
-        return router.go(...state);
+        router.go(...state);
     };
 
     node.addEventListener("click", handler);

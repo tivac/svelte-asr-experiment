@@ -13,7 +13,7 @@ router.addState({
 
 router.addState({
     name     : "app.home",
-    route    : "/home",
+    route    : "/",
     template : Home
 });
 
